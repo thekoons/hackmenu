@@ -13,7 +13,9 @@ class name
 		~name();
 		int read();
 		int display();
-		int set(name &);
+		int set(const name &);
+
+		name & operator=(const name &);
 };
 
 
@@ -27,8 +29,11 @@ class user : public name
 		user();
 		~user();
 		int read();
+		int setStatus();
 		int display();
-		int set(user &);
+		int set(const user &);
+
+		user & operator=(const user &);
 };
 
 #endif
